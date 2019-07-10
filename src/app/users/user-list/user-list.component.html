@@ -1,0 +1,7 @@
+<ul *ngFor="let user of users ; trackBy:commentTrackerFunction ">
+  <li><a [routerLink]="['/users', user.id]">{{user.name}}</a>
+  <button mat-button (click)='deleteUser(user.id)'>delete</button>
+  </li>
+</ul>
+
+<button [routerLink]="['/newUser']">Nuevo usuario</button>

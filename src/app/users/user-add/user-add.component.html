@@ -1,0 +1,46 @@
+<div class="container">
+  <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" #nameField
+        [placeholder]="placeholder.name"
+        [(ngModel)]="userData.name">
+
+      </div>
+      <div class="form-group">
+          <label for="company">Nombre de Usuario:</label>
+          <input type="text" class="form-control" id="company" name="company" #companyField
+          [placeholder]="placeholder.company"
+          [(ngModel)]="userData.company">
+      </div>
+      <div class="form-group">
+          <label for="address">Nombre de Usuario:</label>
+          <input type="text" class="form-control" id="address" name="address" #addressField
+          [placeholder]="placeholder.address"
+          [(ngModel)]="userData.address">
+      </div>
+      <div class="form-group">
+          <label for="phone">Nombre de Usuario:</label>
+          <input type="text" class="form-control" id="phone" name="phone" #phoneField
+          [placeholder]="placeholder.phone"
+          [(ngModel)]="userData.phone">
+      </div>
+      <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" #emailField
+          [placeholder]="placeholder.email"
+          [(ngModel)]="userData.email">
+      </div>
+      <div class="form-group">
+        <div class="form-group">
+          <label for="gender">gender:</label>
+          <input type="gender" class="form-control" id="gender" name="gender" #genderField
+          [placeholder]="placeholder.gender"
+          [(ngModel)]="userData.gender">
+      </div>
+
+          <input type="button" (click)="addUser()" class="btn btn-dark" #sendbutton value="Añadir">
+        </div>
+    </form>
+    {{ user | json}}<br>
+</div>
