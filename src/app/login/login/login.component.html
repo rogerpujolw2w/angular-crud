@@ -1,0 +1,14 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<label>Email
+<!-- <input placeholder="email" [formControl]="loginFrom.get('email')"> Angular
+-->
+ <input placeholder="email" [formControl]="xxemail"> <!-- EcmaScript 6 -->
+</label>
+
+ <label>Password
+<!-- <input placeholder="email" [formControl]="loginFrom.get('email')"> Angular
+-->
+ <input placeholder="Password" [formControl]="xxpassword"> <!-- EcmaScript 6 -->
+</label>
+<button type="submit">Enviar</button>
+</form>
