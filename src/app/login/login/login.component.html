@@ -1,4 +1,7 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+  <mat-card>
+
 <label>Email
 <!-- <input placeholder="email" [formControl]="loginFrom.get('email')"> Angular
 -->
@@ -11,4 +14,11 @@
  <input placeholder="Password" [formControl]="xxpassword"> <!-- EcmaScript 6 -->
 </label>
 <button type="submit">Enviar</button>
+<mat-error *ngIf="((xxemail.invalid || xxpassword.invalid) && (xxemail.dirty || xxemail.touched))"></mat-error>
+Los campos no pueden estar vacios
+
+</mat-card>
+
 </form>
+
+{{loginForm.value | json}}
